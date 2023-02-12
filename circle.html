@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Area of Circle</title>
+    <style>
+      body {
+        border: 5px solid rgb(37, 216, 20);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url(images/bgcircle.jpg);
+      }
+
+      form {
+        border: 5px solid rgb(218, 6, 6);
+        padding: 20px;
+        background-color: rgb(74, 156, 167);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      button {
+        margin-top: 30px;
+        border-radius: 16px;
+        width: 190;
+        height: 40;
+        color: rgb(56, 16, 231);
+      }
+
+      #back-button {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 90;
+        height: 40;
+        border-radius: 16px;
+      }
+    </style>
+    <body>
+      <button id="back-button" onclick="window.location.href='main.html'">Back</button>
+      <form>
+        <h1>Area Circle Calculator</h1>
+        <label for="radius">Enter the radius of the circle:</label>
+        <input type="number" id="radius" required>
+        <button onclick="calcArea()">Calculate Area</button>
+      </form>
+    </body>
+    <script>
+      function calcArea() {
+        let radius = Number(document.getElementById("radius").value);
+        let area = Math.PI * radius * radius;
+        alert("The area of the circle is: " + area.toFixed(2));
+      }
+    </script>
+  </html>

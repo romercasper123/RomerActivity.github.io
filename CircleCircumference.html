@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Circle Circumference Calculator</title>
+    <style>
+      body {
+        border: 5px solid rgb(71, 211, 15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url(images/bggcircle.jpg);
+      }
+
+      form {
+        border: 5px solid rgb(236, 6, 6);
+        padding: 20px;
+        background-color: rgb(170, 107, 107);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      button {
+        margin-top: 30px;
+      }
+
+      #back-button {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 90;
+        height: 40;
+        border-radius: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="back-button" onclick="window.location.href='main.html'">Back</button>
+    <form>
+      <h1>Circle Circumference Calculator</h1>
+      <label for="radius">Enter the radius of the circle:</label>
+      <input type="number" id="radius" required>
+      <button onclick="cal()">Calculate Circumference</button>
+    </form>
+    <script>
+      function cal() {
+        let radius = Number(document.getElementById("radius").value);
+        let circumference = 2 * Math.PI * radius;
+        alert("The circumference of the circle is: " + circumference.toFixed(2));
+      }
+    </script>
+  </body>
+</html>

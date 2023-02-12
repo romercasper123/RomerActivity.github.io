@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Triangle Perimeter Calculator</title>
+    <style>
+      body {
+        border: 5px solid rgb(66, 226, 3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url(images/bg1tr.jpg);
+      }
+
+      form {
+        border: 10px solid rgb(39, 7, 219);
+        padding: 20px;
+        background-color: lightgray;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      button {
+        margin-top: 30px;
+      }
+
+      #back-button {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 90;
+        height: 40;
+        border-radius: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="back-button" onclick="window.location.href='main.html'">Back</button>
+    <form>
+      <h1>Triangle Perimeter Calculator</h1>
+      <label for="side1">Enter the length of side 1:</label>
+      <input type="number" id="side1" required>
+      <label for="side2">Enter the length of side 2:</label>
+      <input type="number" id="side2" required>
+      <label for="side3">Enter the length of side 3:</label>
+      <input type="number" id="side3" required>
+      <button id="calc-button">Calculate Perimeter</button>
+    </form>
+    <script>
+      document.getElementById("calc-button").addEventListener("click", function() {
+        let side1 = Number(document.getElementById("side1").value);
+        let side2 = Number(document.getElementById("side2").value);
+        let side3 = Number(document.getElementById("side3").value);
+        let perimeter = side1 + side2 + side3;
+        alert("The perimeter of the triangle is: " + perimeter.toFixed(2));
+      });
+    </script>
+  </body>
+</html>

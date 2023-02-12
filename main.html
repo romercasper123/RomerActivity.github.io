@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url('images/carbon.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+      }
+      
+      .image {
+        margin: 10px;
+        border: 2px solid rgb(7, 185, 61);
+        border-radius: 10px;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: bounce 10.0s ease infinite;
+      }
+      
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        10% {
+          transform: translateY(250px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      .main{
+        color: rgb(4, 235, 23);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+    <h1>My Activities</h1>
+  </div>
+    <div class="images">
+      <a href="circle.html">
+        <img class="image" src="images/circle.png" alt="Image 1">
+      </a>
+      <a href="triagle.html">
+        <img class="image" src="images/triangle.jpg" alt="Image 2">
+      </a>
+      <a href="CircleCircumference.html">
+        <img class="image" src="images/Circircle.png" alt="Image 3">
+      </a>
+      <a href="perimeter.html">
+        <img class="image" src="images/perimeter.png" alt="Image 4">
+      </a>
+      <a href="ifelse.html">
+        <img class="image" src="images/if.jpg" alt="Image 4">
+      </a>
+    </div>
+  </body>
+</html>

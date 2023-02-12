@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Temperature Message Display</title>
+    <style>
+      body {
+        border: 7px solid rgb(25, 2, 87);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url(images/cloude.jpg);
+      }
+
+      form {
+        border: 5px solid rgba(7, 67, 136, 0.651);
+        padding: 20px;
+        background-color: rgb(187, 123, 50);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      button {
+        margin-top: 30px;
+        width: 180px;
+        height: 50px;
+        border: 5px solid rgb(108, 6, 204);
+        border-radius: 20px;
+      }
+
+      #back-button {
+        position: absolute;
+        left: 40px;
+        top: 20px;
+        width: 90;
+        height: 40;
+        border-radius: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="back-button" onclick="window.location.href='main.html'">Back</button>
+    <form>
+      <h1>Temperature Message Display</h1>
+      <label for="temperature">Enter the temperature:</label>
+      <input type="number" id="temperature" required>
+      <button id="check-button">Check Temperature</button>
+    </form>
+    <script>
+      document.getElementById("check-button").addEventListener("click", function() {
+        let temperature = Number(document.getElementById("temperature").value);
+
+        if (temperature < 0) {
+          alert("☃Freezing weather☃");
+        } else if (temperature >= 0 && temperature <= 10) {
+          alert("🥶Very Cold weather🥶");
+        } else if (temperature >= 11 && temperature <= 20) {
+          alert("💧Cold weather💧");
+        } else if (temperature >= 21 && temperature <= 30) {
+          alert("🌡Normal in Temp🌡");
+        } else if (temperature >= 31 && temperature <= 40) {
+          alert("🥵It's Hot🥵");
+        } else {
+          alert("🔥It's Very Hot🔥");
+        }
+      });
+    </script>
+  </body>
+</html>
